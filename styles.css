@@ -84,8 +84,6 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 @keyframes heartBall{0%,100%{transform:translateY(0) rotate(-5deg);box-shadow:6px 6px 0 var(--purple)}50%{transform:translateY(-78px) rotate(10deg);box-shadow:9px 14px 0 rgba(103,83,158,.48)}}
 @keyframes sparklePop{0%,100%{transform:scale(.75) rotate(-8deg);opacity:.55}50%{transform:scale(1.2) rotate(8deg);opacity:1}}
 @media(max-width:850px){.girl-playground{width:min(370px,88vw);height:430px;transform:rotate(-1deg)}.cartoon-girl{bottom:64px}.bouncy-heart{right:20px}.playful-note{font-size:14px}}
-+
-
 /* Seven reason-specific character scenes */
 .girl-playground{transition:background .45s ease}
 .girl-playground .playful-note{animation:reasonNoteIn .42s ease both}
@@ -112,13 +110,32 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 .scene-silly .girl-sparkle-two{animation:sillyConfetti .7s -.23s ease-in-out infinite}
 .scene-silly .girl-sparkle-three{animation:sillyConfetti .7s -.46s ease-in-out infinite}
 
+.cartoon-boy{display:none;position:absolute;z-index:4;left:67%;bottom:70px;width:150px;height:270px;transform:translateX(-50%);transform-origin:center bottom}
+.boy-hair{position:absolute;z-index:1;left:33px;top:20px;width:84px;height:84px;background:#514260;border:3px solid var(--purple);border-radius:48px 48px 35px 35px;clip-path:polygon(0 0,100% 0,100% 88%,82% 66%,72% 78%,58% 56%,44% 75%,28% 55%,0 84%)}
+.boy-face{position:absolute;z-index:2;left:41px;top:39px;width:68px;height:76px;background:#ffd8c5;border:3px solid var(--purple);border-radius:46% 46% 48% 48%}
+.boy-eye{position:absolute;top:33px;width:7px;height:10px;background:var(--purple);border-radius:50%;animation:girlBlink 4.5s infinite}.boy-eye-left{left:16px}.boy-eye-right{right:16px}
+.boy-cheek{position:absolute;top:48px;width:11px;height:6px;background:#ff9fba;border-radius:50%;opacity:.68}.boy-cheek-left{left:7px}.boy-cheek-right{right:7px}
+.boy-smile{position:absolute;left:50%;top:49px;width:20px;height:11px;border-bottom:3px solid var(--hot);border-radius:0 0 15px 15px;transform:translateX(-50%)}
+.boy-shirt{position:absolute;z-index:4;left:31px;top:112px;width:88px;height:104px;background:linear-gradient(145deg,#7bcfc5,#9be4da);border:3px solid var(--purple);border-radius:27px 27px 22px 22px;display:grid;place-items:center;color:white;font-size:29px;text-shadow:2px 2px 0 var(--purple)}
+.boy-shirt:before{content:"";position:absolute;left:22px;right:22px;top:-2px;height:18px;background:white;border:2px solid var(--purple);border-top:0;border-radius:0 0 15px 15px}.boy-shirt span{transform:translateY(5px)}
+.boy-arm{position:absolute;z-index:3;top:119px;width:22px;height:82px;background:#ffd8c5;border:3px solid var(--purple);border-radius:16px;transform-origin:11px 9px}.boy-arm-left{left:24px}.boy-arm-right{right:23px}.boy-arm-left:after{content:"";position:absolute;left:-2px;bottom:-8px;width:23px;height:25px;background:#ffd8c5;border:3px solid var(--purple);border-radius:50%}
+.boy-leg{position:absolute;z-index:2;top:207px;width:24px;height:51px;background:#8b75bd;border:3px solid var(--purple);border-radius:0 0 13px 13px}.boy-leg-left{left:43px}.boy-leg-right{right:42px}
+.boy-shoe{position:absolute;z-index:5;top:249px;width:40px;height:23px;background:#514260;border:3px solid var(--purple);border-radius:20px 20px 9px 9px}.boy-shoe-left{left:31px}.boy-shoe-right{right:30px}
+.held-heart{display:none;position:absolute;z-index:7;left:50%;top:229px;width:34px;height:34px;place-items:center;transform:translateX(-50%);background:white;border:2px solid var(--purple);border-radius:50%;color:var(--hot);font-family:"Fredoka";font-size:24px;box-shadow:3px 3px 0 var(--purple)}
 .scene-home{background:linear-gradient(165deg,#bfe9ff 0 48%,#ffe4a8 48% 70%,#a8dfd3 70%)}
-.scene-home .cartoon-girl{animation:girlWalkHome 2.25s ease-in-out infinite}
+.scene-home .cartoon-girl{bottom:58px;transform-origin:center bottom;animation:girlComeTogether 3.2s ease-in-out infinite}
+.scene-home .cartoon-boy{display:block;bottom:65px;animation:boyComeTogether 3.2s ease-in-out infinite}
 .scene-home .girl-arm-left{animation:walkArmLeft .55s ease-in-out infinite alternate}
-.scene-home .girl-arm-right{animation:walkArmRight .55s ease-in-out infinite alternate}
+.scene-home .girl-arm-right{animation:girlReachHand 3.2s ease-in-out infinite}
 .scene-home .girl-leg-left{animation:walkLegLeft .55s ease-in-out infinite alternate}
 .scene-home .girl-leg-right{animation:walkLegRight .55s ease-in-out infinite alternate}
-.scene-home .bouncy-heart{right:24px;bottom:110px;background:#fff3b8;color:var(--purple);animation:homeGlow 1.15s ease-in-out infinite}
+.scene-home .boy-arm-left{animation:boyReachHand 3.2s ease-in-out infinite}
+.scene-home .boy-arm-right{animation:walkBoyArm .55s ease-in-out infinite alternate}
+.scene-home .boy-leg-left{animation:walkLegLeft .55s ease-in-out infinite alternate}
+.scene-home .boy-leg-right{animation:walkLegRight .55s ease-in-out infinite alternate}
+.scene-home .held-heart{display:grid;animation:handsMeet 3.2s ease-in-out infinite}
+.scene-home .bouncy-heart{right:22px;bottom:292px;width:58px;height:58px;background:#fff3b8;color:var(--purple);font-size:32px;animation:homeGlow 1.15s ease-in-out infinite}
+.scene-home .playground-shadow{left:39px;width:350px}
 .girl-playground.scene-home:after{background:#8fd9ce}
 
 .scene-bloom{background:linear-gradient(155deg,#dff7ef 0 42%,#ffd8e8 42% 69%,#a8dfb8 69%)}
@@ -159,11 +176,15 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 @keyframes sillyMouth{50%{transform:translateX(-50%) scale(.72)}}
 @keyframes sillyStar{0%,100%{transform:translate(0,0) rotate(-14deg)}50%{transform:translate(-34px,-62px) rotate(22deg)}}
 @keyframes sillyConfetti{0%,100%{transform:translateY(0) rotate(0) scale(.7)}50%{transform:translateY(18px) rotate(160deg) scale(1.2)}}
-@keyframes girlWalkHome{0%,100%{transform:translateX(-72%) translateY(0) rotate(-2deg)}50%{transform:translateX(-25%) translateY(-7px) rotate(2deg)}}
+@keyframes girlComeTogether{0%,12%{left:-7%;transform:translateX(-50%) scale(.68)}56%{left:35%;transform:translateX(-50%) scale(.68)}72%{left:35%;transform:translateX(-50%) translateY(-8px) rotate(-2deg) scale(.68)}88%,100%{left:35%;transform:translateX(-50%) translateY(0) rotate(1deg) scale(.68)}}
+@keyframes boyComeTogether{0%,12%{left:107%;transform:translateX(-50%) scale(.82)}56%{left:65%;transform:translateX(-50%) scale(.82)}72%{left:65%;transform:translateX(-50%) translateY(-8px) rotate(2deg) scale(.82)}88%,100%{left:65%;transform:translateX(-50%) translateY(0) rotate(-1deg) scale(.82)}}
 @keyframes walkArmLeft{from{transform:rotate(24deg)}to{transform:rotate(65deg)}}
-@keyframes walkArmRight{from{transform:rotate(-64deg)}to{transform:rotate(-27deg)}}
+@keyframes girlReachHand{0%,34%{transform:rotate(-38deg)}58%,100%{transform:rotate(-76deg)}}
+@keyframes boyReachHand{0%,34%{transform:rotate(38deg)}58%,100%{transform:rotate(76deg)}}
+@keyframes walkBoyArm{from{transform:rotate(-22deg)}to{transform:rotate(-55deg)}}
 @keyframes walkLegLeft{from{transform:rotate(16deg)}to{transform:rotate(-11deg)}}
 @keyframes walkLegRight{from{transform:rotate(-16deg)}to{transform:rotate(11deg)}}
+@keyframes handsMeet{0%,48%{opacity:0;transform:translateX(-50%) scale(.25)}58%,100%{opacity:1;transform:translateX(-50%) scale(1)}72%{transform:translateX(-50%) translateY(-8px) scale(1.16)}}
 @keyframes homeGlow{0%,100%{transform:scale(.94);box-shadow:6px 6px 0 var(--purple)}50%{transform:scale(1.08);box-shadow:0 0 0 9px rgba(255,255,255,.42),6px 6px 0 var(--purple)}}
 @keyframes girlBloom{0%,100%{transform:translateX(-50%) translateY(0) rotate(-3deg)}50%{transform:translateX(-50%) translateY(-14px) rotate(8deg)}}
 @keyframes bloomArmLeft{0%,100%{transform:rotate(48deg)}50%{transform:rotate(86deg)}}

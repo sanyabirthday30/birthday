@@ -12,7 +12,7 @@ const reasonScenes = [
   { className: "scene-smile", symbol: "♡", note: "smiling brighter because of you ♡", label: "A cute animated girl bouncing, waving, and smiling with a happy heart" },
   { className: "scene-brave", symbol: "♥", note: "brave heart, superhero mode! ♡", label: "A cute animated girl striking a brave superhero pose with her heart held high" },
   { className: "scene-silly", symbol: "✦", note: "giggle attack in progress! ♡", label: "A cute animated girl doing a ridiculous wiggly giggle dance" },
-  { className: "scene-home", symbol: "⌂", note: "always finding my way back to you ♡", label: "A cute animated girl happily walking along a heart path back home" },
+  { className: "scene-home", symbol: "⌂", note: "we always find each other again ♡", label: "A cute animated girl and boy walk toward each other, hold hands, and bounce together" },
   { className: "scene-bloom", symbol: "✿", note: "watching you bloom is magic ♡", label: "A cute animated girl twirling while a flower blooms beside her" },
   { className: "scene-dreams", symbol: "★", note: "reaching for every dream with you ✦", label: "A cute animated girl floating upward to catch a shining dream star" },
   { className: "scene-love", symbol: "♡", note: "simply, completely, Meri Jaan ♡", label: "A cute animated girl cuddling a giant heart and swaying with love" },
