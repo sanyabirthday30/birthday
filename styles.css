@@ -140,7 +140,7 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 .scene-love .cartoon-girl{left:43%;animation:girlLove 2s ease-in-out infinite}
 .scene-love .girl-arm-left{z-index:6;animation:hugArmLeft 2s ease-in-out infinite}
 .scene-love .girl-arm-right{z-index:6;animation:hugArmRight 2s ease-in-out infinite}
-.scene-love .bouncy-heart{right:72px;bottom:143px;width:94px;height:94px;background:#ff8fbd;color:white;font-size:64px;text-shadow:2px 2px 0 var(--purple);animation:heartCuddle 2s ease-in-out infinite}
+.scene-love .bouncy-heart{right:175px;bottom:143px;width:94px;height:94px;background:#ff8fbd;color:white;font-size:64px;text-shadow:2px 2px 0 var(--purple);animation:heartCuddle 2s ease-in-out infinite}
 .scene-love .girl-sparkle{animation:loveSparkle 2s ease-in-out infinite}
 
 @keyframes reasonNoteIn{from{opacity:0;transform:translateX(-50%) translateY(9px) scale(.9)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
@@ -176,14 +176,14 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 @keyframes dreamStar{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(-25px,-18px) rotate(18deg);box-shadow:0 0 0 12px rgba(255,243,184,.28),6px 6px 0 var(--purple)}}
 @keyframes dreamTwinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.25) rotate(90deg);opacity:1}}
 @keyframes girlLove{0%,100%{transform:translateX(-50%) rotate(-3deg)}50%{transform:translateX(-50%) translateY(-8px) rotate(3deg)}}
-@keyframes hugArmLeft{0%,100%{transform:rotate(75deg)}50%{transform:rotate(86deg)}}
-@keyframes hugArmRight{0%,100%{transform:rotate(-78deg)}50%{transform:rotate(-88deg)}}
+@keyframes hugArmLeft{0%,100%{transform:rotate(-54deg)}50%{transform:rotate(-66deg)}}
+@keyframes hugArmRight{0%,100%{transform:rotate(54deg)}50%{transform:rotate(66deg)}}
 @keyframes heartCuddle{0%,100%{transform:scale(.88) rotate(-5deg)}50%{transform:scale(1.05) rotate(4deg);box-shadow:0 0 0 10px rgba(255,255,255,.28),6px 6px 0 var(--purple)}}
 @keyframes loveSparkle{0%,100%{transform:scale(.5);opacity:.35}50%{transform:scale(1.35) rotate(12deg);opacity:1}}
 
 @media(max-width:850px){
   .scene-brave .bouncy-heart,.scene-dreams .bouncy-heart{right:18px}
-  .scene-love .bouncy-heart{right:48px}
+  .scene-love .bouncy-heart{right:138px}
 }
 @media(prefers-reduced-motion:reduce){
   .girl-playground,.girl-playground *{animation:none!important;transition:none!important}
