@@ -84,3 +84,107 @@ footer{height:92px;background:var(--purple);color:white;display:flex;align-items
 @keyframes heartBall{0%,100%{transform:translateY(0) rotate(-5deg);box-shadow:6px 6px 0 var(--purple)}50%{transform:translateY(-78px) rotate(10deg);box-shadow:9px 14px 0 rgba(103,83,158,.48)}}
 @keyframes sparklePop{0%,100%{transform:scale(.75) rotate(-8deg);opacity:.55}50%{transform:scale(1.2) rotate(8deg);opacity:1}}
 @media(max-width:850px){.girl-playground{width:min(370px,88vw);height:430px;transform:rotate(-1deg)}.cartoon-girl{bottom:64px}.bouncy-heart{right:20px}.playful-note{font-size:14px}}
++
+
+/* Seven reason-specific character scenes */
+.girl-playground{transition:background .45s ease}
+.girl-playground .playful-note{animation:reasonNoteIn .42s ease both}
+.scene-smile .cartoon-girl{animation:girlSmileDance 1.8s ease-in-out infinite}
+.scene-smile .bouncy-heart{animation:smileHeart 1.45s cubic-bezier(.3,.1,.4,1) infinite}
+
+.scene-brave{background:linear-gradient(150deg,#c9eee8 0 44%,#fff3b8 44% 72%,#ffcfe3 72%)}
+.scene-brave .cartoon-girl{animation:girlBrave 1.6s ease-in-out infinite}
+.scene-brave .cartoon-girl:before{content:"";position:absolute;z-index:0;left:43px;top:125px;width:105px;height:128px;background:#ff6ea8;border:3px solid var(--purple);clip-path:polygon(15% 0,85% 0,100% 100%,50% 80%,0 100%);transform-origin:50% 5%;animation:capeFlutter .8s ease-in-out infinite alternate}
+.scene-brave .girl-arm-left{animation:braveArmLeft 1.6s ease-in-out infinite}
+.scene-brave .girl-arm-right{animation:braveArmRight 1.6s ease-in-out infinite}
+.scene-brave .bouncy-heart{right:32px;bottom:280px;width:64px;height:64px;font-size:39px;background:#fff3b8;animation:braveHeart 1.6s ease-in-out infinite}
+.scene-brave .girl-sparkle{color:#ff6ea8}
+
+.scene-silly{background:linear-gradient(155deg,#fff3b8 0 38%,#cbbcff 38% 68%,#ffcfe3 68%)}
+.scene-silly .cartoon-girl{animation:girlSilly .72s ease-in-out infinite}
+.scene-silly .girl-arm-left{animation:sillyArmLeft .72s ease-in-out infinite}
+.scene-silly .girl-arm-right{animation:sillyArmRight .72s ease-in-out infinite}
+.scene-silly .girl-shoe-left{animation:sillyShoeLeft .72s ease-in-out infinite}
+.scene-silly .girl-shoe-right{animation:sillyShoeRight .72s ease-in-out infinite}
+.scene-silly .girl-smile{width:19px;height:18px;border:3px solid var(--hot);border-top-color:var(--hot);border-radius:50%;background:#fff;animation:sillyMouth .72s ease-in-out infinite}
+.scene-silly .bouncy-heart{right:24px;bottom:250px;background:#fff;color:#ff7faf;animation:sillyStar .72s ease-in-out infinite}
+.scene-silly .girl-sparkle-one{animation:sillyConfetti .7s ease-in-out infinite}
+.scene-silly .girl-sparkle-two{animation:sillyConfetti .7s -.23s ease-in-out infinite}
+.scene-silly .girl-sparkle-three{animation:sillyConfetti .7s -.46s ease-in-out infinite}
+
+.scene-home{background:linear-gradient(165deg,#bfe9ff 0 48%,#ffe4a8 48% 70%,#a8dfd3 70%)}
+.scene-home .cartoon-girl{animation:girlWalkHome 2.25s ease-in-out infinite}
+.scene-home .girl-arm-left{animation:walkArmLeft .55s ease-in-out infinite alternate}
+.scene-home .girl-arm-right{animation:walkArmRight .55s ease-in-out infinite alternate}
+.scene-home .girl-leg-left{animation:walkLegLeft .55s ease-in-out infinite alternate}
+.scene-home .girl-leg-right{animation:walkLegRight .55s ease-in-out infinite alternate}
+.scene-home .bouncy-heart{right:24px;bottom:110px;background:#fff3b8;color:var(--purple);animation:homeGlow 1.15s ease-in-out infinite}
+.girl-playground.scene-home:after{background:#8fd9ce}
+
+.scene-bloom{background:linear-gradient(155deg,#dff7ef 0 42%,#ffd8e8 42% 69%,#a8dfb8 69%)}
+.scene-bloom .cartoon-girl{animation:girlBloom 2.5s ease-in-out infinite}
+.scene-bloom .girl-arm-left{animation:bloomArmLeft 2.5s ease-in-out infinite}
+.scene-bloom .girl-arm-right{animation:bloomArmRight 2.5s ease-in-out infinite}
+.scene-bloom .girl-dress{background:linear-gradient(145deg,#ff82b5,#ffc467)}
+.scene-bloom .bouncy-heart{right:22px;bottom:93px;background:#fff;color:#ff78ab;font-size:44px;animation:flowerBloom 2.5s ease-in-out infinite}
+.scene-bloom .girl-sparkle{color:#ff9a4f;animation:petalFloat 2.5s ease-in-out infinite}
+
+.scene-dreams{background:linear-gradient(155deg,#bdb4f3 0 45%,#d7d2ff 45% 70%,#8fd9ce 70%)}
+.scene-dreams .cartoon-girl{animation:girlDream 2.4s ease-in-out infinite}
+.scene-dreams .girl-arm-left{animation:dreamArmLeft 2.4s ease-in-out infinite}
+.scene-dreams .girl-arm-right{animation:dreamArmRight 2.4s ease-in-out infinite}
+.scene-dreams .bouncy-heart{right:31px;bottom:292px;background:#fff3b8;color:#f2a838;font-size:42px;box-shadow:0 0 0 7px rgba(255,243,184,.34),6px 6px 0 var(--purple);animation:dreamStar 2.4s ease-in-out infinite}
+.scene-dreams .girl-sparkle{color:#fff3a6;animation:dreamTwinkle 1.1s ease-in-out infinite}
+
+.scene-love{background:linear-gradient(150deg,#ffd3e6 0 48%,#fff0b5 48% 69%,#c6eae4 69%)}
+.scene-love .cartoon-girl{left:43%;animation:girlLove 2s ease-in-out infinite}
+.scene-love .girl-arm-left{z-index:6;animation:hugArmLeft 2s ease-in-out infinite}
+.scene-love .girl-arm-right{z-index:6;animation:hugArmRight 2s ease-in-out infinite}
+.scene-love .bouncy-heart{right:72px;bottom:143px;width:94px;height:94px;background:#ff8fbd;color:white;font-size:64px;text-shadow:2px 2px 0 var(--purple);animation:heartCuddle 2s ease-in-out infinite}
+.scene-love .girl-sparkle{animation:loveSparkle 2s ease-in-out infinite}
+
+@keyframes reasonNoteIn{from{opacity:0;transform:translateX(-50%) translateY(9px) scale(.9)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+@keyframes girlSmileDance{0%,100%{transform:translateX(-50%) translateY(0) rotate(-2deg)}50%{transform:translateX(-50%) translateY(-12px) rotate(2deg)}}
+@keyframes smileHeart{0%,100%{transform:translateY(0) rotate(-5deg);box-shadow:6px 6px 0 var(--purple)}50%{transform:translateY(-78px) rotate(10deg);box-shadow:9px 14px 0 rgba(103,83,158,.48)}}
+@keyframes girlBrave{0%,100%{transform:translateX(-50%) translateY(0) scale(1)}45%{transform:translateX(-50%) translateY(-20px) scale(1.04)}55%{transform:translateX(-50%) translateY(-17px) scale(1.04)}}
+@keyframes capeFlutter{to{transform:skewX(-9deg) rotate(6deg)}}
+@keyframes braveArmLeft{0%,100%{transform:rotate(145deg)}50%{transform:rotate(126deg)}}
+@keyframes braveArmRight{0%,100%{transform:rotate(-145deg)}50%{transform:rotate(-126deg)}}
+@keyframes braveHeart{0%,100%{transform:scale(.9) rotate(-7deg)}50%{transform:scale(1.14) rotate(7deg);box-shadow:0 0 0 9px rgba(255,143,189,.2),6px 6px 0 var(--purple)}}
+@keyframes girlSilly{0%,100%{transform:translateX(-50%) translateY(0) rotate(-6deg)}50%{transform:translateX(-50%) translateY(-8px) rotate(7deg)}}
+@keyframes sillyArmLeft{0%,100%{transform:rotate(68deg)}50%{transform:rotate(125deg)}}
+@keyframes sillyArmRight{0%,100%{transform:rotate(-118deg)}50%{transform:rotate(-42deg)}}
+@keyframes sillyShoeLeft{0%,100%{transform:rotate(-24deg) translateY(-8px)}50%{transform:rotate(8deg) translateY(0)}}
+@keyframes sillyShoeRight{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(25deg) translateY(-8px)}}
+@keyframes sillyMouth{50%{transform:translateX(-50%) scale(.72)}}
+@keyframes sillyStar{0%,100%{transform:translate(0,0) rotate(-14deg)}50%{transform:translate(-34px,-62px) rotate(22deg)}}
+@keyframes sillyConfetti{0%,100%{transform:translateY(0) rotate(0) scale(.7)}50%{transform:translateY(18px) rotate(160deg) scale(1.2)}}
+@keyframes girlWalkHome{0%,100%{transform:translateX(-72%) translateY(0) rotate(-2deg)}50%{transform:translateX(-25%) translateY(-7px) rotate(2deg)}}
+@keyframes walkArmLeft{from{transform:rotate(24deg)}to{transform:rotate(65deg)}}
+@keyframes walkArmRight{from{transform:rotate(-64deg)}to{transform:rotate(-27deg)}}
+@keyframes walkLegLeft{from{transform:rotate(16deg)}to{transform:rotate(-11deg)}}
+@keyframes walkLegRight{from{transform:rotate(-16deg)}to{transform:rotate(11deg)}}
+@keyframes homeGlow{0%,100%{transform:scale(.94);box-shadow:6px 6px 0 var(--purple)}50%{transform:scale(1.08);box-shadow:0 0 0 9px rgba(255,255,255,.42),6px 6px 0 var(--purple)}}
+@keyframes girlBloom{0%,100%{transform:translateX(-50%) translateY(0) rotate(-3deg)}50%{transform:translateX(-50%) translateY(-14px) rotate(8deg)}}
+@keyframes bloomArmLeft{0%,100%{transform:rotate(48deg)}50%{transform:rotate(86deg)}}
+@keyframes bloomArmRight{0%,100%{transform:rotate(-65deg)}50%{transform:rotate(-104deg)}}
+@keyframes flowerBloom{0%,18%{transform:translateY(62px) scale(.25) rotate(-15deg)}58%,100%{transform:translateY(0) scale(1) rotate(8deg)}}
+@keyframes petalFloat{0%,100%{transform:translateY(-5px) rotate(-20deg);opacity:.4}50%{transform:translateY(22px) translateX(10px) rotate(80deg);opacity:1}}
+@keyframes girlDream{0%,100%{transform:translateX(-55%) translateY(15px) rotate(-4deg)}50%{transform:translateX(-38%) translateY(-45px) rotate(5deg)}}
+@keyframes dreamArmLeft{0%,100%{transform:rotate(42deg)}50%{transform:rotate(82deg)}}
+@keyframes dreamArmRight{0%,100%{transform:rotate(-92deg)}50%{transform:rotate(-132deg)}}
+@keyframes dreamStar{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(-25px,-18px) rotate(18deg);box-shadow:0 0 0 12px rgba(255,243,184,.28),6px 6px 0 var(--purple)}}
+@keyframes dreamTwinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.25) rotate(90deg);opacity:1}}
+@keyframes girlLove{0%,100%{transform:translateX(-50%) rotate(-3deg)}50%{transform:translateX(-50%) translateY(-8px) rotate(3deg)}}
+@keyframes hugArmLeft{0%,100%{transform:rotate(75deg)}50%{transform:rotate(86deg)}}
+@keyframes hugArmRight{0%,100%{transform:rotate(-78deg)}50%{transform:rotate(-88deg)}}
+@keyframes heartCuddle{0%,100%{transform:scale(.88) rotate(-5deg)}50%{transform:scale(1.05) rotate(4deg);box-shadow:0 0 0 10px rgba(255,255,255,.28),6px 6px 0 var(--purple)}}
+@keyframes loveSparkle{0%,100%{transform:scale(.5);opacity:.35}50%{transform:scale(1.35) rotate(12deg);opacity:1}}
+
+@media(max-width:850px){
+  .scene-brave .bouncy-heart,.scene-dreams .bouncy-heart{right:18px}
+  .scene-love .bouncy-heart{right:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .girl-playground,.girl-playground *{animation:none!important;transition:none!important}
+}

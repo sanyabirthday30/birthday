@@ -8,11 +8,25 @@ const reasons = [
   ["07", "Simply, Meri Jaan", "My favourite person. The one I love more than all our arguments combined."],
 ];
 
+const reasonScenes = [
+  { className: "scene-smile", symbol: "♡", note: "smiling brighter because of you ♡", label: "A cute animated girl bouncing, waving, and smiling with a happy heart" },
+  { className: "scene-brave", symbol: "♥", note: "brave heart, superhero mode! ♡", label: "A cute animated girl striking a brave superhero pose with her heart held high" },
+  { className: "scene-silly", symbol: "✦", note: "giggle attack in progress! ♡", label: "A cute animated girl doing a ridiculous wiggly giggle dance" },
+  { className: "scene-home", symbol: "⌂", note: "always finding my way back to you ♡", label: "A cute animated girl happily walking along a heart path back home" },
+  { className: "scene-bloom", symbol: "✿", note: "watching you bloom is magic ♡", label: "A cute animated girl twirling while a flower blooms beside her" },
+  { className: "scene-dreams", symbol: "★", note: "reaching for every dream with you ✦", label: "A cute animated girl floating upward to catch a shining dream star" },
+  { className: "scene-love", symbol: "♡", note: "simply, completely, Meri Jaan ♡", label: "A cute animated girl cuddling a giant heart and swaying with love" },
+];
+
 const reasonCard = document.querySelector(".reason-card");
 const reasonNumber = reasonCard.querySelector(".reason-number");
 const reasonTitle = reasonCard.querySelector("strong");
 const reasonText = reasonCard.querySelector("p");
 const reasonDots = document.querySelector(".reason-dots");
+const girlPlayground = document.querySelector(".girl-playground");
+const cartoonGirl = girlPlayground.querySelector(".cartoon-girl");
+const reasonSymbol = girlPlayground.querySelector(".bouncy-heart");
+const playfulNote = girlPlayground.querySelector(".playful-note");
 let reasonIndex = 0;
 
 function showReason(index) {
@@ -21,9 +35,23 @@ function showReason(index) {
   reasonNumber.textContent = `NO. ${number}`;
   reasonTitle.textContent = title;
   reasonText.textContent = text;
+  const scene = reasonScenes[index];
+  girlPlayground.classList.remove(...reasonScenes.map((item) => item.className));
+  girlPlayground.classList.add(scene.className);
+  girlPlayground.setAttribute("aria-label", scene.label);
+  reasonSymbol.textContent = scene.symbol;
+  playfulNote.textContent = scene.note;
   reasonDots.querySelectorAll("button").forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === index));
   reasonCard.style.animation = "none";
-  requestAnimationFrame(() => { reasonCard.style.animation = ""; });
+  cartoonGirl.style.animation = "none";
+  reasonSymbol.style.animation = "none";
+  playfulNote.style.animation = "none";
+  requestAnimationFrame(() => {
+    reasonCard.style.animation = "";
+    cartoonGirl.style.animation = "";
+    reasonSymbol.style.animation = "";
+    playfulNote.style.animation = "";
+  });
 }
 
 reasons.forEach((_, index) => {
